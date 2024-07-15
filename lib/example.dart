@@ -1,6 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-
 import 'loading_button.dart';
 
 
@@ -18,7 +17,10 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
 
-  bool isLoading = false;
+  bool isLoading_1 = false;
+  bool isLoading_2 = false;
+  bool isLoading_3 = false;
+  bool isLoading_4 = false;
 
   @override
   Widget build(BuildContext context) {
@@ -37,30 +39,30 @@ class _MyAppState extends State<MyApp> {
               LoadingButtonPlus(
                     loadingWidget: const LinearProgressIndicator(color: Colors.black26,),
                     borderRadius: BorderRadius.circular(5),
-                    height: 30,
-                    width: 200,
+                    height: 40,
+                    width: 250,
                     padding: const EdgeInsets.all(5),
                     textColor: Colors.white,
-                    isLoading: isLoading,
-                    text: "Button Text",
+                    isLoading: isLoading_1,
+                    text: "Text",
                     onTap: () {
                       setState(() {
-                        isLoading= !isLoading;
+                        isLoading_1= !isLoading_1;
                       });
                     }),
               LoadingButtonPlus(
                     stockWidth: 2,
                     color: Colors.greenAccent,
-                    height: 30,
-                    width: 200,
+                    height: 60,
+                    width: 250,
                     padding: const EdgeInsets.all(5),
                     textColor: Colors.white,
-                    isLoading: isLoading,
-                    text: "Loading Button",
+                    isLoading: isLoading_2,
+                    text: "Text",
                     circularProgressColor: Colors.black,
                     onTap: () {
                       setState(() {
-                        isLoading= !isLoading;
+                        isLoading_2= !isLoading_2;
                       });
                     }),
               LoadingButtonPlus(
@@ -71,16 +73,31 @@ class _MyAppState extends State<MyApp> {
                   ],
                   stops: [0.3,1.0]
                   ),
-                  height: 30,
-                  width: 200,
+                  height: 50,
+                  width: 250,
                   padding: const EdgeInsets.all(5),
                   textColor: Colors.white,
-                  isLoading: isLoading,
-                  text: "Loading Button",
+                  isLoading: isLoading_3,
+                  text: "Text",
                   circularProgressColor: Colors.black,
                   onTap: () {
                     setState(() {
-                      isLoading= !isLoading;
+                      isLoading_3= !isLoading_3;
+                    });
+                  }),
+              LoadingButtonPlus(
+                  loadingWidget: Image.asset("assets/loading.gif") ,
+                  color: const Color(0xff141e26),
+                  height: 100,
+                  width: 250,
+                  padding: const EdgeInsets.all(5),
+                  textColor: Colors.white,
+                  isLoading: isLoading_4,
+                  text: "Text",
+                  circularProgressColor: Colors.black,
+                  onTap: () {
+                    setState(() {
+                      isLoading_4= !isLoading_4;
                     });
                   }),
             ],
