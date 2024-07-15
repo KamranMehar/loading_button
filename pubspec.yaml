@@ -1,7 +1,7 @@
-name: loading_button
-description: "A new Flutter package project."
+name: loading_button_plus
+description: "A flutter package to add a text button having loading indicator"
 version: 0.0.1
-homepage:
+homepage: https://github.com/KamranMehar/loading_button.git
 
 environment:
   sdk: '>=3.4.3 <4.0.0'
@@ -10,7 +10,6 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  get:
 
 dev_dependencies:
   flutter_test:
